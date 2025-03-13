@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Holerites</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </div>
+        <h2>Filtro de Holerites</h2>
+        <p>Adicione as informações para filtrar corretamente</p>
+        
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Nome do Colaborador" required>
+            </div>
+        
+            <div class="input-group">
+                <input type="number" name="admissao" placeholder="Ano de Admissão" required>
+            </div>
+        
+            <div class="input-group">
+                <input type="number" name="demissao" placeholder="Ano de Recisão" required>
+            </div>
+        
+            <div class="input-group">
+                <input type="file" name="file" required>
+            </div>
+        
+            <button id="filterBtn" type="submit"> Filtrar</span> </button>
+            
+            
+        </form>
+        
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
