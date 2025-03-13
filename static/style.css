@@ -91,4 +91,7 @@ button:hover {
     background: #088f8a;
 }
 
-
+.loading {
+    background-color: #ccc; /* Cor de fundo enquanto carrega */
+    cursor: not-allowed;
+}
